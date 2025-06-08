@@ -21,7 +21,10 @@ window.addEventListener('scroll', () => {
     });
 
     opacity.forEach(element => {
-        element.style.opacity = scroll / (sectionY.top + section_height);
+        let opacityValue = scroll / (sectionY.top + section_height);
+        opacityValue = Math.min(Math.max(opacityValue, 0), 1); // entre 0 y 1
+        element.style.opacity = opacityValue;
+
     })
 
     big_title.style.opacity = - scroll / (header_height / 2) + 1;

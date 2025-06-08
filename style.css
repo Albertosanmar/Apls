@@ -175,7 +175,7 @@ section .container > *{
     transform: translateY(-50px);
 }
 
-.imgcontainer{
+.imgContainer{
     transform: translateY(50px);
 }
 
